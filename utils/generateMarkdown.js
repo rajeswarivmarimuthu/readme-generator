@@ -57,46 +57,48 @@ function generateMarkdown(data) {
   let questionsText =''; 
   let authorBadge = '';
   let authorGHUrl = '';
-
-  //preparing questions section
-  if (data.email) {
-    questionsText = `In case of any questions or comments, please reach out to me @ ${data.email}`
-  }  
+  let authorInfo = '';
 
   //preparing author info to display it on top of readme
   if(data.username) {
-    authorBadge = `https://img.shields.io/static/v1?label=Author&message=${data.username}&color=blue`;
+    const username = data.username.trim();
+    authorBadge = `https://img.shields.io/static/v1?label=Author&message=${username}&color=blue`;
     authorGHUrl = `https://github.com/${data.username}`;
     authorInfo = `[![img](${authorBadge})](${authorGHUrl})`
   }
 
-  //returns the formatted template literal to write to readme.md file
+    //preparing questions section
+    if (data.email) {
+      questionsText = `In case of any questions or comments, please reach out to me directly @ ${data.email} or through my [github profile](${authorGHUrl})`
+    }  
+
+  //returns the formatted template literal to write to nreadme.md file
   return `# ${data.repoTitle} 
    ${authorInfo} ${licenseInfo}
 
-${data.description}
+   ${data.description}
 
 ### Table of Contents
   * [Installation Instructions](#installation)
   * [Usage](#usage)
   * [License](#license)
   * [Contributing](#contributing)
-  * [Questions?](#questions?)
+  * [Questions?](#questions)
 
 ### Installation 
-${data.install}
+ ${data.install}
 
 ### Usage
-${data.usage}
+ ${data.usage}
 
 ### License
-${licenseText}
+ ${licenseText}
 
 ### Contributing
-${data.contributing}
+ ${data.contributing}
 
 ### Questions? 
-${questionsText}
+ ${questionsText}
 
 `;
 }

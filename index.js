@@ -1,10 +1,9 @@
-// TODO: Include packages needed for this application
+// Packages needed for this application
 const inquirer = require('inquirer');
-//const util = require ("./utils")
 const fs = require('fs');
 const generateMarkdown = require("./utils/generateMarkdown");
 
-// TODO: Create an array of questions for user input
+// An array of questions for user input
 const questions = [
     {
         message: "What is your Application/Repo Title?",
@@ -35,7 +34,7 @@ const questions = [
           return val.toUpperCase();
         }
       },
-      // created ref for contributors 
+      // created ref for contributing guidelines 
       {
         message: "Contributing guidelines: ",
         name: "contributing"
@@ -50,14 +49,14 @@ const questions = [
         message: "Provide contact email",
         name: "email"
       },
-      // created ref for github username
+      // created ref for github username of the author 
       {
         message: "Input author's github username",
         name: "username"
       }
 ];
 
-// TODO: Create a function to write README file
+// Function to write README file
 function writeToFile(fileName, data) {
   fs.writeFile(fileName,data,(err) =>
   err ? console.error(err) : console.log('Success!'));
@@ -68,7 +67,7 @@ function init() {
     inquirer.prompt(questions).then((answers) => {
        console.log(answers);
        mdFile = generateMarkdown(answers);
-       writeToFile('readme.md',mdFile);
+       writeToFile('README.md',mdFile);
       });
 }
 
