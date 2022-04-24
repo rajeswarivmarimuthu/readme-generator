@@ -9,22 +9,18 @@ const questions = [
         message: "What is your Application/Repo Title?",
         name: "repoTitle"
       },
-      // created ref for description
       {
         message: "Provide a comprehensive application description:",
         name: "description"
       },
-      // created ref for info to install
       {
         message: " Provide instructions to install your application: ",
         name: "install"
       },
-      // ref for usage of repo created
       {
         message: "Your repo's usage",
         name: "usage"
       },
-      // created ref for license 
       {
         message: "Select a license to add to your repo",
         name: "license",
@@ -34,22 +30,18 @@ const questions = [
           return val.toUpperCase();
         }
       },
-      // created ref for contributing guidelines 
       {
         message: "Contributing guidelines: ",
         name: "contributing"
       },
-      // created ref to run tests if needed
       {
         message: "Tests",
         name: "tests"
       },
-      // created ref for email
       {
         message: "Provide contact email",
         name: "email"
       },
-      // created ref for github username of the author 
       {
         message: "Input author's github username",
         name: "username"

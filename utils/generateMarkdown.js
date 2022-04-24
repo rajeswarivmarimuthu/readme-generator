@@ -45,7 +45,6 @@ function renderLicenseSection(license) {
   return licenseText;
 }
 
-
 // Function to generate markdown for README
 function generateMarkdown(data) {  
   //consolidating license data
@@ -67,10 +66,10 @@ function generateMarkdown(data) {
     authorInfo = `[![img](${authorBadge})](${authorGHUrl})`
   }
 
-    //preparing questions section
-    if (data.email) {
-      questionsText = `In case of any questions or comments, please reach out to me directly @ ${data.email} or through my [github profile](${authorGHUrl})`
-    }  
+  //preparing questions section
+  if (data.email) {
+    questionsText = `In case of any questions or comments, please reach out to me directly @ ${data.email} or through my [github profile](${authorGHUrl})`
+  }  
 
   //returns the formatted template literal to write to nreadme.md file
   return `# ${data.repoTitle} 
