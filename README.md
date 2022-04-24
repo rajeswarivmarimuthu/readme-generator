@@ -9,6 +9,7 @@
   * [License](#license)
   * [Contributing](#contributing)
   * [Questions?](#questions)
+  * [Demo](#demo)
 
 ### Installation 
  This application is not published anywhere yet. Only way to use it for now is to clone/fork it to local to use it. 
