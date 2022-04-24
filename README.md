@@ -26,5 +26,5 @@
  In case of any questions or comments, please reach out to me directly @ rajeswarivmarimuthu@gmail.com  or through my [github profile](https://github.com/rajeswarivmarimuthu)
 
 ### Demo
-[video](./assets/readme-generator-walkthrough-video.mov)
+Watch the [Demo](https://youtu.be/FMZQ0hkrJAk) to see how it works!
 
